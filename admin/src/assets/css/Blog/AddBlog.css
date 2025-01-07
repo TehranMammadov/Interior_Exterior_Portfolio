@@ -1,0 +1,15 @@
+.blog-add{
+    position: relative;
+    width: 75%;
+    margin-left: 16%;
+    margin-top: 40px;
+    background: #FFFFFF;
+    border: 1px solid #E3E5E4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.blog-add form{
+    margin-left: 0;
+}

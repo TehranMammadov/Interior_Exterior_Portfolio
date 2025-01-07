@@ -1,0 +1,273 @@
+@import "../../styles/styles.scss";
+
+.service {
+    padding: 40px 16% 200px $mainPaddingRightAndLeft;
+
+    .service-main {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &__title {
+            @include fontStyles($cormorantFont, 40px, 600, $lightGrayHeader);
+            line-height: 48px;
+            margin-right: 20px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        &__all-fields {
+            max-width: 800px;
+            .field-section {
+                &:not(:last-child) {
+                    margin-bottom: 150px;
+                }
+                &__big-title {
+                    border: 1px solid #FAFAFA;
+                    padding-block: 25px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+                    line-height: 24px;
+                    @include fontStyles($interFont, $fontSizeTexts-1920px, 400, $lightGrayHeader);
+                }
+                &__desc {
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                    margin-right: 100px;
+                    line-height: 32px;
+                    @include fontStyles($interFont, 22px, 400, $lightGrayText);
+                }
+                ul {
+                    margin-right: 100px;
+                    li {
+                        margin-left: 7px;
+                        display: flex;
+                        line-height: 27px;
+                        margin-bottom: 5px;
+                        @include fontStyles($interFont, 22px, 400, $lightGrayText);
+                        p {
+                            margin-left: 7px;
+                        }
+                    }
+                }
+                h3 {
+                    margin-right: 100px;
+                    line-height: 32px;
+                    margin-bottom: 5px;
+                    @include fontStyles($interFont, 22px, 400, $lightGrayText);
+                }
+            }
+        }
+    }
+    .stages-fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item-field {
+            width: 42.5%;
+            margin-bottom: 30px;
+            .field-id {
+                @include fontStyles($cormorantFont, 44px, 500, #FFFFFF);
+                line-height: 52px;
+            }
+            .field-title {
+                @include fontStyles($interFont, $fontSizeTexts-1920px, 500, $lightGrayText);
+                line-height: 25px;
+                margin: 10px 0 5px 5px;
+                text-transform: uppercase
+            }
+            .field-desc {
+                @include fontStyles($interFont, 22px, 400, $lightGrayText);
+                line-height: 26px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .service {
+        .service-main {
+            &__title {
+                font-size: 38px;
+                line-height: 46px;
+            }
+            &__all-fields {
+                max-width: 720px;
+                .field-section {
+                    &__big-title {
+                        line-height: 22px;
+                        font-size: $fontSizeTexts-1600px;
+                    }
+                    &__desc, h3 {
+                        line-height: 30px;
+                        font-size: $fontSizeTexts-1920px;
+                    }
+                    ul {
+                        li {
+                            line-height: 25px;
+                            font-size: $fontSizeTexts-1920px;
+                        }
+                    }
+                }
+            }
+        }
+        .stages-fields {
+            &__item-field {
+                .field-id {
+                    font-size: 42px;
+                    line-height: 50px;
+                }
+                .field-title {
+                    font-size: $fontSizeTexts-1600px;
+                    line-height: 23px;
+                }
+                .field-desc {
+                    font-size: $fontSizeTexts-1920px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .service {
+        .service-main {
+            &__title {
+                font-size: 36px;
+                line-height: 44px;
+            }
+            &__all-fields {
+                max-width: 670px;
+                .field-section {
+                    &__big-title {
+                        line-height: 20px;
+                        font-size: $fontSizeTexts-1450px;
+                    }
+                    &__desc, h3 {
+                        line-height: 28px;
+                        font-size: $fontSizeTexts-1600px;
+                    }
+                    ul {
+                        li {
+                            line-height: 23px;
+                            font-size: $fontSizeTexts-1600px;
+                        }
+                    }
+                }
+            }
+        }
+        .stages-fields {
+            &__item-field {
+                .field-id {
+                    font-size: 40px;
+                    line-height: 48px;
+                }
+                .field-title {
+                    font-size: $fontSizeTexts-1450px;
+                    line-height: 21px;
+                }
+                .field-desc {
+                    font-size: $fontSizeTexts-1600px;
+                    line-height: 22px;
+                    margin-left: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .service {
+        padding-right: $mainPaddingRightAndLeft;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .service {
+        padding: 40px 20px 100px 20px;
+        .service-main {
+            &__all-fields {
+                .field-section {
+                    &:not(:last-child) {
+                        margin-bottom: 100px;
+                    }
+                    &__desc, ul, h3 {
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+        .stages-fields {
+            &__item-field {
+                width: 47%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .service {
+        .service-main {
+            &__title {
+                font-size: 34px;
+                line-height: 42px;
+            }
+            &__all-fields {
+                .field-section {
+                    &__big-title {
+                        line-height: 18px;
+                        font-size: 15px;
+                    }
+                    &__desc, h3 {
+                        margin-right: 0;
+                        font-size: $fontSizeTexts-1450px;
+                    }
+                    ul {
+                        margin-right: 0;
+                        li {
+                            line-height: 21px;
+                            font-size: $fontSizeTexts-1450px;
+                        }
+                    }
+                }
+            }
+        }
+        .stages-fields {
+            &__item-field {
+                width: 48%;
+                .field-id {
+                    font-size: 38px;
+                }
+                .field-title {
+                    font-size: 15px;
+                }
+                .field-desc {
+                    font-size: $fontSizeTexts-1450px;
+                    line-height: 20px;
+                    margin-left: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 486px) {
+    .service {
+        .service-main {
+            flex-direction: column;
+            &__title {
+                margin-bottom: 40px;
+            }
+            &__all-fields {
+                width: 100%;
+            }
+        }
+        .stages-fields {
+            &__item-field {
+                width: 100%;
+            }
+        }
+    }
+}

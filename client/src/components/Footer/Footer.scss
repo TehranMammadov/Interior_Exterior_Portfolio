@@ -1,0 +1,120 @@
+@import "../../styles/styles";
+
+.footer {
+  // position: absolute;
+  // bottom: 0;
+  padding: 50px $mainPaddingRightAndLeft;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  &__social-media,
+  &__policy {
+    display: flex;
+    align-items: center;
+    a,
+    p {
+      @include fontStyles(
+        $interFont,
+        $fontSizeTexts-1920px,
+        500,
+        $blackColorContacts
+      );
+      text-transform: uppercase;
+      &:first-child {
+        margin-right: 40px;
+      }
+      u {
+        border-bottom: 1px solid $blackColorContacts;
+        &.u-white {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+    p {
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &.footer-white {
+    .footer__social-media,
+    .footer__policy {
+      a,
+      p {
+        color: white;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1600px) {
+  .footer {
+    &__social-media,
+    &__policy {
+      a,
+      p {
+        font-size: $fontSizeTexts-1600px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .footer {
+    &__social-media,
+    &__policy {
+      p {
+        font-size: $fontSizeTexts-1450px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 50px 20px;
+    &__social-media,
+    &__policy {
+      a,
+      p {
+        font-size: 15px;
+      }
+      a:first-child {
+        margin-right: 20px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .footer {
+    padding: 50px 20px 20px 20px;
+    flex-direction: column;
+    &__social-media {
+      display: none;
+    }
+    &__policy {
+      flex-direction: row-reverse;
+      a:first-child {
+        margin-right: 0 !important;
+      }
+      p:first-child {
+        margin-right: 0;
+      }
+      p:last-child {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .footer {
+    &__policy {
+      p:last-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}

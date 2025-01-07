@@ -1,0 +1,219 @@
+{
+  "header": {
+    "home": "Ana Səhifə",
+    "about": "Haqqımda",
+    "service": "Xidmət",
+    "portfolio": "Portfel",
+    "bloq": "Bloq",
+    "contact": "Əlaqə",
+    "lng": "az"
+  },
+  "footer": {
+    "1": {
+      "title": "DESIGNED BY CLARADIX"
+    }
+  },
+  "home": {
+    "banner-btn": "Hamısını göstər",
+    "Point-btn": "Daha çox",
+    "placeholder1": "Eksklüziv dekorasiya",
+    "placeholder2": "İnterior",
+    "placeholder3": "Eksterior",
+    "placeholder4": "Tikinti",
+    "placeholder5": "Landşaft",
+    "news-title": "Gəlin birgə çalışaq",
+    "news-title1": "Bizimlə əlaqə",
+    "news-title2": "Yeni bir layihəyə başlamaq istəyirsiniz? Gəlin, birlikdə ideyalarınızı reallaşdıraq!",
+    "news-title3": "bütün işlərə bax"
+  },
+  "about": {
+    "videosData": [
+      {
+        "link": "https://youtu.be/v9HnP3MPKYc",
+        "title": "'High İnterior Design' şirkətinin təsisçisi Leyla Cabbarlı - ARB 24 (Business Lady)"
+      },
+      {
+        "link": "https://youtu.be/bEatV_6hlOk",
+        "title": "Kreativ sənayə. Interyer dizayner kimdir?"
+      },
+      {
+        "link": "https://youtu.be/IomQjsd7tMk",
+        "title": "Leyla Cabbarlı: Dizayner həm də psixoloq olmalı, müştərinin həyat tərzini öyrənməlidir – TELEBLOQ"
+      },
+      {
+        "link": "https://youtu.be/LJ4HAKCz5ik",
+        "title": "Heyətlərə və küçələrə vurulan tamet daşlar və fasad boyalarının muzakirəsi. Acar verlisi ictimati tv"
+      },
+      {
+        "link": "https://youtu.be/etjr6tzon60",
+        "title": "İnteryer dizayn Asiya restoranı Takeshi Leyla Naib Cabbarli, Bakı/Azərbaycan."
+      },
+      {
+        "link": "https://youtu.be/DuUuqSaZ14M",
+        "title": "Mərdəkanda bağ evi. Eksteryer və landşaft dizayn 'High Interior Design' Leyla Naib Jabbarli"
+      },
+      {
+        "link":"https://youtu.be/gxTe0CQhIyo",
+        "title":"İnteryerdə Milli dekor. Kreativ sənayə verlişi. ARB24. Interyer dizayner Leyla Naib Cabbarlı"
+      }
+    ],
+    "videoSwitch":{
+      "link":"izləmək üçün keçid edin"
+    }
+  },
+  "service": {
+    "advantages": [
+      {
+        "text": "Hər bir müştəriyə fərdi yanaşma."
+      },
+      {
+        "text": "Smeta tərtib etmək ödənişsizdir."
+      },
+      {
+        "text": "Yeni tikililərdə mənzillərin qəbulunda köməklik."
+      },
+      {
+        "text": "Zəmanət, Keyfiyyət, Vaxta və əməyə qənaət, Büdcəyə qənaət, Texniki şərtlərin formalaşdırılması və smetaların hesablanması."
+      },
+      {
+        "text": "Yalnız yüksək keyfiyyətli (saxta deyil), ekoloji cəhətdən təmiz materiallardan istifadə."
+      },
+      {
+        "text": "İşdə təmir prosesini mümkün qədər modernləşdirən yüksək dəqiqlikli müasir texnologiyalardan istifadə."
+      },
+      {
+        "text": "Təmirin həyata keçirilməsinin bütün mərhələlərində keyfiyyətə nəzarətin aparılması."
+      },
+      {
+        "text": "Bütün xidmətlər bir şirkətdə."
+      }
+    ],
+    "guarantee": {
+      "description": "Təmirin növündən asılı olaraq 1 ildən 3 ilə qədər görülən bütün işlərə zəmanət veririk.Biz hər bir Müştərinin məxfiliyinə, əmlakın təhlükəsizliyinə, binada qaydalara və təmizliyə zəmanət veririk.",
+      "applicable": {
+        "title": "Zəmanət müqavilə əsasında yerinə yetirilən bütün işlərə şamil edilir, yəni:",
+        "elements": [
+          {
+            "text": "Alt yapı işləri;"
+          },
+          {
+            "text": "Elektrik quraşdırma işləri;"
+          },
+          {
+            "text": "Santexnika işləri;"
+          },
+          {
+            "text": "Digər görünməyən işlərə."
+          }
+        ]
+      },
+      "notProvided": {
+        "title": "Zəmanət aşağıda qeyd olunmuş materialları və qüsurları əhatə etmir:",
+        "elements": [
+          {
+            "text": "Obyektin normal aşınması;"
+          },
+          {
+            "text": "Avadanlıqları və materialları düzgün istifadə etmədikdə;"
+          },
+          {
+            "text": "Gözlənilməz hallar, yəni: binaların su basması, yanğın , beton panellərdə aşınma və s.;"
+          },
+          {
+            "text": "Məkanın istifadə qaydalırının pozulması."
+          }
+        ]
+      }
+    },
+    "insurance": {
+      "description": "Təmir sığortası, gözlənilməz hallar zamanı əmlakınızı qorumağa imkan verir - xərcləri azaltmaq, təmir işləri və ailə büdcəsini qorumaq üçün əla bir yoldur.",
+      "elements": [
+        {
+          "text": "Oğurluq və ya vandalizm (məsələn- xuliqanlar şüşəni sındırsa)."
+        },
+        {
+          "text": "Üçüncü şəxslərin təqsiri üzündən mənzilin su basması."
+        },
+        {
+          "text": "Mənzildə və ya qonşularda , təbii fəlakətlər , qaz partlayışı , yanğın."
+        }
+      ]
+    },
+    "repairStages": [
+      {
+        "id": "01",
+        "title": "Hazırlıq",
+        "desc": "Layihənin müzakirəsi, Binaların ölçülməsi, Dizayn layihəsinin hazırlanması (əgər mövcud deyilsə), Mühəndislik layihələrinin hazırlanması (zəruri olduqda), Layihə layihəsi üçün müqavilənin və ətraflı smetasının tərtib edilməsi, Müfəssəl cədvəlin tərtib edilməsi. işin istehsalı və materialların tədarükü, Müqavilə və smetaların müzakirəsi və düzəliş edilməsi, Müqavilənin bağlanması . Bitmiş layihə varsa 1-2 gün . Tam dizayn layihəsini hazırlayarkən 1-2 ay"
+      },
+      {
+        "id": "02",
+        "title": "Alt yapı",
+        "desc": "Alt yapı materialların satın alınması və sahəyə çatdırılması, Daxili arakəsmələrin sökülməsi və quraşdırılması, Elektrik naqilləri və aşağı gərginlikli şəbəkələr üçün cihaz, Su təchizatı və kanalizasiya üçün cihaz, Divarların, tavanların və döşəmənin suvaqlanması, Döşəmə istilik, ventilyasiya və quraşdırılması. kondisioner sistemləri, Divarların, döşəmələrin, tavanların səs və istilik izolyasiyası üçün aparat boya və alçıpan işləri 1.5-3 ay"
+      },
+      {
+        "id": "03",
+        "title": "Kosmetik",
+        "desc": "Keramika plitələr, çini daş məmulatları, mərmər və s. Parket, parket və ya massiv lövhələrin döşənməsi, divarların, tavanların, yamacların rənglənməsi, dekorativ suvaq vurulması, divar kağızı, freskalar, daxili qapı bloklarının, bəzək və yubkaların quraşdırılması, santexnika qurğularının birləşdirilməsi, elektrik cihazlarının birləşdirilməsi, tikinti tullantılarının təmizlənməsi və təmizlənməsi 1.5- 3 ay"
+      },
+      {
+        "id": "04",
+        "title": "Mebel",
+        "desc": "Yumşaq mebellərin çatdırılması və yığılması Dülgərlik mebellərinin çatdırılması və yığılması bloklar və s. Rəflərin, karnizlərin və digər aksesuarların quraşdırılması Pərdələrin asılması, yastıqların və digər tekstil məmulatlarının düzülməsi Mətbəx, məişət, televizor avadanlıqlarının birləşdirilməsi və s. 10-14 gün (bitirmə işlərinin başa çatması ilə eyni vaxtda həyata keçirilir)"
+      },
+      {
+        "id": "05",
+        "title": "Təhvil",
+        "desc": "Avtomatlaşdırmanın, işıqlandırmanın, su təchizatının, bütün kondisionerlərin, havalandırmanın, istilik sistemlərinin və s. ,Sifariş edilən bütün mebel, tekstil, dekorasiya və s. mövcudluğunun yoxlanılması. , Obyektin təmizlənməsi, pəncərələrin yuyulması , Obyektin təhvil verilməsi və görülən işin yekun aktının imzalanması 1-2 gün"
+      }
+    ],
+    "id6": {
+      "before": "Üstünlüklər"
+    },
+    "id7": {
+      "after": "Zəmanət"
+    },
+    "id8": {
+      "field-sec": "Siğorta"
+    },
+    "main-4": {
+      "banner-text": "Təmir mərhələləri"
+    }
+  },
+  "1": {
+    "title": "Hazırlıq",
+    "title1": "Layihənin müzakirəsi, Binaların ölçülməsi, Dizayn layihəsinin hazırlanması (əgər mövcud deyilsə), Mühəndislik layihələrinin hazırlanması (zəruri olduqda), Layihə layihəsi üçün müqavilənin və ətraflı smetasının tərtib edilməsi, Müfəssəl cədvəlin tərtib edilməsi. işin istehsalı və materialların tədarükü, Müqavilə və smetaların müzakirəsi və düzəliş edilməsi, Müqavilənin bağlanması . Bitmiş layihə varsa 1-2 gün . Tam dizayn layihəsini hazırlayarkən 1-2 ay"
+  },
+  "title h1": {
+    "2": "Alt Yapı",
+    "title2": "Alt yapı materialların satın alınması və sahəyə çatdırılması, Daxili arakəsmələrin sökülməsi və quraşdırılması, Elektrik naqilləri və aşağı gərginlikli şəbəkələr üçün cihaz, Su təchizatı və kanalizasiya üçün cihaz, Divarların, tavanların və döşəmənin suvaqlanması, Döşəmə istilik, ventilyasiya və quraşdırılması. kondisioner sistemləri, Divarların, döşəmələrin, tavanların səs və istilik izolyasiyası üçün aparat boya və alçıpan işləri 1.5-3 ay"
+  },
+  "title h2": {
+    "3": "Kosmetik",
+    "title3": "Keramika plitələr, çini daş məmulatları, mərmər və s. Parket, parket və ya massiv lövhələrin döşənməsi, divarların, tavanların, yamacların rənglənməsi, dekorativ suvaq vurulması, divar kağızı, freskalar, daxili qapı bloklarının, bəzək və yubkaların quraşdırılması, santexnika qurğularının birləşdirilməsi, elektrik cihazlarının birləşdirilməsi, tikinti tullantılarının təmizlənməsi və təmizlənməsi 1.5- 3 ay"
+  },
+  "title h3": {
+    "4": "Mebel",
+    "title": "Yumşaq mebellərin çatdırılması və yığılması Dülgərlik mebellərinin çatdırılması və yığılması bloklar və s. Rəflərin, karnizlərin və digər aksesuarların quraşdırılması Pərdələrin asılması, yastıqların və digər tekstil məmulatlarının düzülməsi Mətbəx, məişət, televizor avadanlıqlarının birləşdirilməsi və s. 10-14 gün (bitirmə işlərinin başa çatması ilə eyni vaxtda həyata keçirilir)"
+  },
+  "title h4": {
+    "5": "Təhvil",
+    "title": "Avtomatlaşdırmanın, işıqlandırmanın, su təchizatının, bütün kondisionerlərin, havalandırmanın, istilik sistemlərinin və s. ,Sifariş edilən bütün mebel, tekstil, dekorasiya və s. mövcudluğunun yoxlanılması. , Obyektin təmizlənməsi, pəncərələrin yuyulması , Obyektin təhvil verilməsi və görülən işin yekun aktının imzalanması 1-2 gün"
+  },
+  "portfolio": {
+    "text": "Məlumatlar"
+  },
+  "bloq": {
+    "notification": "Daha çox",
+    "content":"Bloqa keçid et"
+  },
+  "Contact": {
+    "main-h1": "Gəlin birgə çalışaq",
+    "main-h2": "Bizimlə əlaqə",
+    "more-title": "Yeni bir layihəyə başlamaq istəyirsiniz? Gəlin, birlikdə ideyalarınızı reallaşdıraq!",
+    "send": "Göndər",
+    "message": "Mesaj uğurla göndərildi",
+    "name": "Ad və Soyad",
+    "email": "E-poçt",
+    "phone": "Telefon"
+  }
+}

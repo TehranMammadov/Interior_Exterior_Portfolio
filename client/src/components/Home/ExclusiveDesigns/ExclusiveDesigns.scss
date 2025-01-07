@@ -1,0 +1,170 @@
+@import "../../../styles/styles";
+
+.exclusive-design {
+  padding: 155px $mainPaddingRightAndLeft;
+  &__container {
+    &__card-item {
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-bottom: 30px;
+      border: 1px solid #fafafa;
+      height: 130px;
+      transition: all 0.2s linear;
+      &__title-and-desc {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        h1 {
+          @include fontStyles($cormorantFont, 40px, 500, $lightGrayHeader);
+          margin-left: 5%;
+          text-transform: uppercase;
+          transition: all 0.2s linear;
+          z-index: 99;
+          margin-right: 20px;
+        }
+      }
+      &__image {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s linear;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 0 70%;
+        }
+      }
+    }
+    &__card-item:hover {
+      border: transparent;
+    }
+    &__card-item:hover &__card-item__image {
+      opacity: 1;
+    }
+    &__card-item:hover h1 {
+      margin-left: -15%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .exclusive-design {
+    &__container {
+      &__card-item {
+        height: 120px;
+        &__title-and-desc {
+          h1 {
+            font-size: 38px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .exclusive-design {
+    &__container {
+      &__card-item {
+        height: 110px;
+        &__title-and-desc {
+          h1 {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .exclusive-design {
+    padding: 140px 20px;
+    &__container {
+      &__card-item {
+        width: 100%;
+        &__title-and-desc {
+          h1 {
+            font-size: 30px;
+          }
+        }
+      }
+      &__card-item:hover h1 {
+        margin-top: -25%;
+        margin-left: -11%;
+        font-size: 40px;
+      }
+      &__card-item:hover {
+        width: 90%;
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .exclusive-design {
+    &__container {
+      &__card-item {
+        &__title-and-desc {
+          h1 {
+            margin-left: 2%;
+          }
+        }
+      }
+      &__card-item:hover h1 {
+        margin-top: -35%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .exclusive-design {
+    &__container {
+      &__card-item {
+        &__title-and-desc {
+          h1 {
+            font-size: 25px;
+          }
+        }
+      }
+      &__card-item:hover h1 {
+        margin-top: -50%;
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .exclusive-design {
+    &__container {
+      &__card-item:hover h1 {
+        margin-top: -60%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .exclusive-design {
+    &__container {
+      &__card-item {
+        &__title-and-desc {
+          h1 {
+            font-size: 20px;
+          }
+        }
+      }
+      &__card-item:hover h1 {
+        margin-top: -70%;
+        font-size: 30px;
+      }
+    }
+  }
+}

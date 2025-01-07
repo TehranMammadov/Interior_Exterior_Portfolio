@@ -1,0 +1,80 @@
+.intro-header {
+    margin-top: 10px;
+    width: 800px;
+    padding: 20px;
+    background: #FFFFFF;
+    order: 1px solid #E3E5E4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.form-buttons-header {
+    margin-top: 20px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-buttons-header button:nth-child(1) {
+    padding: 0 10px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #848484;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #848484;
+}
+
+.form-buttons-header button:nth-child(2) {
+    padding: 0 10px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #323232;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #323232;
+    margin-left: 10px;
+}
+
+.form-buttons-header button:nth-child(1) {
+    padding: 0 10px;
+    height: 40px;
+    background: #323232;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #F8F8F8;
+    margin-left: 10px;
+}
+.intro-header input{
+    width: 560px;
+}
+.file-button {
+    width: 560px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #E3E5E4;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

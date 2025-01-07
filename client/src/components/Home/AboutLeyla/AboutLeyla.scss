@@ -1,0 +1,197 @@
+@import "../../../styles/styles";
+
+.about-leila {
+  padding: 60px 0 0 $mainPaddingRightAndLeft;
+  display: flex;
+  height: 100vh;
+  opacity: 1;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    width: 38%;
+    z-index: 999;
+    max-height: 600px;
+    img {
+      width: 100%;
+      aspect-ratio: 8/10;
+    }
+  }
+  &__description {
+    &__texts {
+      display: flex;
+      align-items: flex-start;
+      margin: 0 $mainPaddingRightAndLeft 0 auto;
+      padding: 10px 0 30px 70px;
+      width: 45%;
+      border-top: 2px solid #7194eb;
+      p {
+        @include fontStyles(
+          $interFont,
+          $fontSizeTexts-1920px,
+          500,
+          $lightGrayText
+        );
+        line-height: 25px;
+        margin-left: 10px;
+      }
+    }
+    &__triangle {
+      position: absolute;
+      right: 0;
+      width: 61%;
+      &__image {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 500;
+        img {
+          width: 100%;
+        }
+      }
+      h1 {
+        @include fontStyles(
+          $cormorantFont,
+          $commonMiddleFontSize-1920px,
+          400,
+          white
+        );
+        text-align: end;
+        padding-right: 12%;
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .about-leila {
+    &__description {
+      &__texts {
+        p {
+          font-size: $fontSizeTexts-1600px;
+        }
+      }
+      &__triangle {
+        width: 58%;
+        h1 {
+          font-size: $commonMiddleFontSize-1600px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .about-leila {
+    &__description {
+      &__texts {
+        p {
+          font-size: $fontSizeTexts-1450px;
+        }
+      }
+      &__triangle {
+        width: 58%;
+        h1 {
+          font-size: $commonMiddleFontSize-1450px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .about-leila {
+    &__description {
+      &__triangle {
+        width: 52%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .about-leila {
+    padding: 60px 20px;
+    height: auto;
+    flex-direction: column;
+    &__image {
+      width: 40%;
+    }
+    &__description {
+      display: flex;
+      flex-direction: column;
+      &__texts {
+        margin: 55% 0 0 auto;
+        padding: 10px 0 0 0;
+        width: 70%;
+      }
+      &__triangle {
+        width: 70%;
+        margin-top: 10%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .about-leila {
+    &__description {
+      &__texts {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .about-leila {
+    &__image {
+      position: static;
+      width: 70%;
+    }
+    &__description {
+      display: block;
+      &__texts {
+        margin-top: 15px;
+        width: 100%;
+      }
+      &__triangle {
+        position: static;
+        width: 100%;
+        margin-bottom: 80px;
+        &__image {
+          z-index: -1;
+          width: 125%;
+          right: 0;
+        }
+        h1 {
+          padding-top: 10px;
+          text-align: left;
+          padding-left: 30px;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .about-leila {
+    &__description {
+      &__triangle {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .about-leila {
+    &__description {
+      &__triangle {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  .loader-img {
+    border-radius: 50%;
+    margin: -200px auto 0 auto;
+    width: 150px;
+    height: 150px;
+    img {
+      transform: scale(2);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  &.loader-pink {
+    background-color: #D66CA3;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .loader-img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

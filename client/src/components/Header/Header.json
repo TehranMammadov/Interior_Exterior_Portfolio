@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "id": 1, "text": " Haqqımda", "link": "about" },
+    { "id": 2, "text": "Service", "link": "services" },
+    { "id": 3, "text": "Portfolio", "link": "portfolio" },
+    { "id": 4, "text": "Bloq", "link": "blog" },
+    { "id": 5, "text": "Əlaqə", "link": "contact" },
+    {
+      "link": "alksdj",
+      "id": 6,
+      "languages": [
+        { "id": 7, "lang": "en", "link": "en" },
+        { "id": 8, "lang": "ru", "link": "ru" },
+        { "id": 9, "lang": "az", "link": "az" }
+      ]
+    }
+  ]
+}

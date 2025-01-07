@@ -1,0 +1,305 @@
+@import "../../styles/styles";
+
+.contact {
+  padding: 50px 16% 100px 16%;
+  &__work-together {
+    @include fontStyles($interFont, 22px, 600, $blackColorContacts);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__details {
+    border: 1px solid $blackColorContacts;
+    padding: 30px 70px;
+    &.sent {
+      height: 470px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .svg {
+        position: relative;
+        bottom: 8px;
+      }
+      .h1 {
+        @include fontStyles($cormorantFont, 40px, 500, $blackColorContacts);
+      }
+    }
+    h1 {
+      @include fontStyles(
+        $cormorantFont,
+        $commonMiddleFontSize-1920px,
+        500,
+        $blackColorContacts
+      );
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &__description {
+      @include fontStyles($cormorantFont, 1.5rem, 600, $blackColorContacts);
+      width: 50%;
+      margin: 50px 0;
+      line-height: 25px;
+    }
+    &__messagge-send-part {
+      margin: 0 10%;
+      &__contact-info {
+        display: flex;
+        justify-content: space-between;
+        p {
+          white-space: break-spaces;
+          word-break: break-word;
+          @include fontStyles(
+            $interFont,
+            $fontSizeTexts-1920px,
+            500,
+            $blackColorContacts
+          );
+        }
+      }
+      &__your-info {
+        text-align: end;
+        margin: 100px 0;
+        p {
+          @include fontStyles(
+            $interFont,
+            $fontSizeTexts-1600px,
+            400,
+            $redColorError
+          );
+          margin-bottom: 5px;
+        }
+        &__enter-part {
+          display: flex;
+          flex-direction: column;
+          input {
+            @include fontStyles(
+              $interFont,
+              $fontSizeTexts-1920px,
+              300,
+              $blackColorContacts
+            );
+            margin-bottom: 20px;
+            width: 100% !important;
+            padding: 12px 10px;
+            border: 1px solid black;
+            &:focus::placeholder {
+              color: transparent;
+            }
+            &:focus {
+              outline: none;
+            }
+            &.error {
+              border: 1px solid $redColorError;
+            }
+            &.success {
+              border: 1px solid black;
+            }
+          }
+        }
+        button {
+          @include fontStyles($interFont, 1.4rem, 600, $blackColorContacts);
+          margin-bottom: 5px;
+          border: none;
+          background: none;
+        }
+      }
+    }
+    &__social {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .contact {
+    &__work-together {
+      font-size: $fontSizeTexts-1920px;
+    }
+    &__details {
+      h1 {
+        font-size: $commonMiddleFontSize-1600px;
+      }
+      &__description {
+        font-size: 1.4rem;
+      }
+      &__messagge-send-part {
+        &__contact-info {
+          p {
+            font-size: $fontSizeTexts-1600px;
+          }
+        }
+        &__your-info {
+          p {
+            font-size: $fontSizeTexts-1450px;
+          }
+          &__enter-part {
+            input {
+              font-size: $fontSizeTexts-1600px;
+              width: 370px;
+            }
+          }
+          button {
+            font-size: $fontSizeTexts-1920px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .contact {
+    &__work-together {
+      font-size: $fontSizeTexts-1600px;
+    }
+    &__details {
+      h1 {
+        font-size: $commonMiddleFontSize-1450px;
+      }
+      &__description {
+        font-size: $fontSizeTexts-1920px;
+      }
+      &__messagge-send-part {
+        &__contact-info {
+          p {
+            font-size: $fontSizeTexts-1450px;
+          }
+        }
+        &__your-info {
+          p {
+            font-size: 14px;
+          }
+          &__enter-part {
+            input {
+              font-size: $fontSizeTexts-1450px;
+              width: 350px;
+            }
+          }
+          button {
+            font-size: $fontSizeTexts-1600px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .contact {
+    padding-top: 50px;
+    &__details {
+      &__description {
+        width: 80%;
+      }
+      &__messagge-send-part {
+        flex-direction: column-reverse;
+        &__contact-info {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .contact {
+    padding: 50px 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    &__details {
+      padding: 30px;
+      &.sent {
+        .svg {
+          display: none;
+        }
+      }
+      &__messagge-send-part {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .contact {
+    &__work-together {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &__details {
+      padding: 10px;
+      h1 {
+        font-family: "Cormorant";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      &__description {
+        width: 100%;
+        margin: 30px 0;
+      }
+      &__messagge-send-part {
+        margin-top: 60px;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        &__your-info {
+          width: 100%;
+          &__enter-part {
+            input {
+              width: 100%;
+            }
+          }
+          button {
+            margin-right: 15px;
+          }
+        }
+        &__contact-info {
+          margin-top: 80px;
+          flex-direction: column;
+          p:first-child {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      &__social {
+        display: flex;
+        margin-top: 50px;
+        margin-bottom: 7px;
+        p:first-child {
+          margin-right: 40px;
+        }
+        a {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          text-transform: uppercase;
+
+          color: #101010;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .contact__details__social {
+    p:first-child {
+      margin-right: 20px;
+    }
+  }
+}

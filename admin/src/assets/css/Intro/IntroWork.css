@@ -1,0 +1,28 @@
+.work-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+.work{
+    width: 600px;
+    padding: 20px;
+    background: #FFFFFF;
+    order: 1px solid #E3E5E4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.work div{
+    margin-bottom: 20px;
+}
+
+.work div p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+}

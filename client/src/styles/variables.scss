@@ -1,0 +1,32 @@
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$cormorantFont: "Cormorant";
+$interFont: "Inter";
+
+// COLORS
+$backColorBlue: #3e71f1;
+$backColorLightGreen: #99d4c2;
+$backColorPurple: #bc85d4;
+$backColorPink: #d66ca3;
+$lightGrayText: #f1f1f1;
+$lightGrayHeader: #f2f2f2;
+$blackColorHeaders: #383838;
+$blackColorContents: #151515;
+$blackColorContacts: #101010;
+$redColorError: #e21919;
+$bottomLineColor: #f0e983;
+
+// FONT SIZES
+$fontSizeTexts-1920px: 1.25rem;
+$fontSizeTexts-1600px: 1.125rem;
+$fontSizeTexts-1450px: 1rem;
+$commonMiddleFontSize-1920px: 4rem;
+$commonMiddleFontSize-1600px: 3.5rem;
+$commonMiddleFontSize-1450px: 3.1rem;
+
+// MARGINS
+$mainPaddingRightAndLeft: 9.4%;
+$paddingLeft: 9.4%;
+$paddingRight: 9.4%;

@@ -1,0 +1,2257 @@
+openapi: 3.0.1
+info:
+  title: Leyla Naib
+  description: 'This is a Leyla API documentation for testing frontend developer we love you and we dont want you to straggle.'
+  contact:
+    email: farhad.aliev2020@gmail.com
+  version: 1.0.0
+servers:
+  - url: http://localhost:3001
+  - url: https://leylajabbarli.az
+  - url: https://leylanaib.az
+  - url: https://leyla-naib.herokuapp.com
+tags:
+  - name: User
+    description: Everything about your Users
+  - name: Blog
+    description: Crud operations in Blog
+  - name : Home
+    description: Crud operations in Home Page
+  - name: Portfolio
+    description: operation in Portfolio
+  - name: About
+    description: About operation
+  - name: Inbox
+    description: Inbox operation
+  - name: File
+    description: File operation
+  - name: Category
+    description: Category operation
+  - name: Interior
+    description: Interior operation
+  - name: File
+    description: File operation
+paths:
+  /api/user/registration :
+    post:
+      tags:
+        - User
+      summary: Create User
+      operationId: user
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description : use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        description: Create user for login system and to use functions by Admin
+        content:
+          application/json:
+            schema:
+              email:
+                type: string
+              password:
+                type : string
+              confirmPassword:
+                type: string
+            example: # Sample object
+              email: djeks922@gmail.com
+              password: Djeks922.
+              confirmPassword: Djeks922.
+        required: true
+      responses:
+        201:
+          description: Created
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/user/role:
+    post:
+      tags:
+        - User
+      summary: Create Role
+      operationId: role
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example : en
+          default : en
+      requestBody:
+        description: Create role for user by admin
+        content:
+          application/json:
+            schema:
+              roleName:
+                type: string
+              password:
+                type: string
+              confirmPassword:
+                type: string
+            example: # Sample object
+              roleName: ADMIN
+        required: true
+      responses:
+        201:
+          description: Created
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    get:
+      tags:
+        - User
+      summary: Get Roles
+      operationId: roles
+      description: Get role list for admin
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: Created
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/user/login:
+    post:
+      tags:
+        - User
+      summary: Login
+      operationId: login
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        description: login system
+        content:
+          application/json:
+            schema:
+              email:
+                type: string
+              password:
+                type: string
+              example :
+                email : farhad.aliev2020@gmail.com
+                password : salam
+        required: true
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/user/logout:
+    post:
+      tags:
+        - User
+      summary: Logout
+      operationId: logout
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/form:
+    post:
+      tags:
+        - Form
+      summary: Form
+      operationId: form
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        description: Contact us
+        content:
+          application/json:
+            schema:
+              email:
+                type: string
+              phone:
+                type: number
+              message:
+                type: string
+              example:
+                email: farhad.aliev2020@gmail.com
+                phone: 994502129136
+                message : Birşeylər yaz
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/blog:
+    post:
+      tags:
+        - Blog
+      summary: Create Blog
+      description: Create Blog by admin
+      operationId: createBlog
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                azTitle:
+                  type: string
+                  description: Blog title
+                  example : Başlıq yaz
+                enTitle:
+                  type: string
+                  description: Blog title
+                  example: Write header
+                ruTitle:
+                  type: string
+                  description: Blog title
+                  example: Write header
+                azDescription:
+                  type: string
+                  description: Blog description
+                  example : Mövzu
+                enDescription:
+                  type: string
+                  description: Blog description
+                  example : Mövzu
+                ruDescription:
+                  type: string
+                  description: Blog description
+                  example : Mövzu
+                azContent:
+                  type: string
+                  description: Blog Content
+                  example: Content
+                enContent:
+                  type: string
+                  description: Blog Content
+                  example: Content
+                ruContent:
+                  type: string
+                  description: Blog Content
+                  example: Content
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description: Blog poster image
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - Blog
+      summary: Update Blog
+      description: Update Blog by admin .
+      operationId: updateBlog
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description : Get blog id
+                azTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlıq yaz
+                enTitle:
+                   type: string
+                   description: Blog title
+                   example: Write header
+                ruTitle:
+                   type: string
+                   description: Blog title
+                   example: Write header
+                azDescription:
+                   type: string
+                   description: Blog description
+                   example: Mövzu
+                enDescription:
+                   type: string
+                   description: Blog description
+                   example: Mövzu
+                ruDescription:
+                   type: string
+                   description: Blog description
+                   example: Mövzu
+                azContent:
+                   type: string
+                   description: Blog Content
+                   example: Content
+                enContent:
+                   type: string
+                   description: Blog Content
+                   example: Content
+                ruContent:
+                   type: string
+                   description: Blog Content
+                   example: Content
+                poster:
+                   type: array
+                   items:
+                     type: file
+                   description: Blog poster image
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    delete:
+      tags:
+        - Blog
+      summary: Delete Blog
+      description: Remove Blog by admin
+      operationId: removeBlog
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+            content:
+              application/json:
+                schema:
+                  id:
+                    type: string
+                  example:
+                    id : 6266613b5d44248c72d15dd8
+            required: true
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/blog:
+    get:
+      tags:
+        - Blog
+      summary: Get Blogs
+      description:  Blogs display
+      operationId: getBlogs
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/blog/{id}:
+    get:
+      tags:
+        - Blog
+      summary: Get Blog
+      operationId: getBlog
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: id
+          in : path
+          type: string
+          example : 626661abe375250f61aed043
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/blog/category/{category}:
+    get:
+      tags:
+        - Blog
+      summary: Get Blogs by Category
+      operationId: getBlogsByCategory
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: category
+          in: path
+          type:
+          description: Category Id
+          example: 6266613b5d44248c72d15dd8
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+
+
+  /api/admin/video/:
+    post:
+      tags:
+        - Video
+      summary: Create Video
+      description: Create Video Content by admin
+      operationId: createVideo
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        application/json:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Video url
+                  example: Url yaz
+                azTitle:
+                  type: string
+                  description: Video title
+                  example: Video yaz
+                enTitle:
+                  type: string
+                  description: Video title
+                  example: Video header
+                ruTitle:
+                  type: string
+                  description: Video title
+                  example: Video header
+                azDescription:
+                  type: string
+                  description: Video description
+                  example: Mövzu
+                enDescription:
+                  type: string
+                  description: Video description
+                  example: Mövzu
+                ruDescription:
+                  type: string
+                  description: Video description
+                  example: Mövzu
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - Video
+      summary: Update Video
+      description: Update Video Content by admin .
+      operationId: updateVideo
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - application/json:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Get Video id
+                url:
+                  type: string
+                  description: Video url
+                  example: Video url
+                azTitle:
+                  type: string
+                  description: Video title
+                  example: Video title
+                enTitle:
+                  type: string
+                  description: Video title
+                  example: Video header
+                ruTitle:
+                  type: string
+                  description: Video title
+                  example: Video header
+                azDescription:
+                  type: string
+                  description: Video description
+                  example: Mövzu
+                enDescription:
+                  type: string
+                  description: Video description
+                  example: Mövzu
+                ruDescription:
+                  type: string
+                  description: Video description
+                  example: Mövzu
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/video/{id}:
+    delete:
+      tags:
+        - Video
+      summary: Delete Video
+      description: Remove Video by admin
+      operationId: removeVideo
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type:
+        - name: id
+          in: path
+          description: Id which you want to delete
+          required: true
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/video:
+    get:
+      tags:
+        - Video
+      summary: Get videos
+      description: videos display
+      operationId: getVideos
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/video/{id}:
+    get:
+      tags:
+        - Video
+      summary: Get Video
+      operationId: getVideo
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: id
+          in: path
+          type: string
+          example: 626661abe375250f61aed043
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+
+  /api/admin/portfolio:
+    post:
+      tags:
+        - Portfolio
+      summary: Create Portfolio
+      description: Create Portfolio by admin
+      operationId: createPortfolio
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - application/json:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                azTitle:
+                  type: string
+                  description: Portfolio title
+                  example: Başlı yaz
+                enTitle:
+                  type: string
+                  description: Portfolio title
+                  example: Başlı yaz
+                ruTitle:
+                  type: string
+                  description: Portfolio title
+                  example: Başlı yaz
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description: Portfolio poster image
+                azDescription:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                enDescription:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                ruDescription:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                azContent:
+                  type: string
+                  description: Content .
+                  example: Bir şeylər yaz
+                enContent:
+                  type: string
+                  description: Content .
+                  example: Bir şeylər yaz
+                ruContent:
+                  type: string
+                  description: Content .
+                  example: Bir şeylər yaz
+                footerImage:
+                  type: array
+                  items:
+                    type: file
+                  description: Portfolio footer image
+                module:
+                  type: array
+                  items:
+                    properties:
+                      azModuleTitle:
+                        type: string
+                      enModuleTitle:
+                        type: string
+                      ruModuleTitle:
+                        type: string
+                      azModuleDescription:
+                        type: string
+                      enModuleDescription:
+                        type: string
+                      ruModuleDescription:
+                        type: string
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - Portfolio
+      summary: Update Portfolio
+      description: Update Portfolio by admin .
+      operationId: updatePortfolio
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Get portfolio id
+                azTitle:
+                  type: string
+                  description: Portfolio title
+                  example: Başlı yaz
+                enTitle:
+                  type: string
+                  description: Portfolio title
+                  example: Başlı yaz
+                ruTitle:
+                  type: string
+                  description: Portfolio title
+                  example: Başlı yaz
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description: Portfolio poster image
+                azDescription:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                enDescription:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                ruDescription:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                azContent:
+                  type: string
+                  description: Content .
+                  example: Bir şeylər yaz
+                enContent:
+                  type: string
+                  description: Content .
+                  example: Bir şeylər yaz
+                ruContent:
+                  type: string
+                  description: Content .
+                  example: Bir şeylər yaz
+                footerImage:
+                  type: array
+                  items:
+                    type: file
+                  description: Portfolio footer image
+                module:
+                  type: array
+                  items:
+                    properties:
+                      azModuleTitle:
+                        type: string
+                      enModuleTitle:
+                        type: string
+                      ruModuleTitle:
+                        type: string
+                      azModuleDescription:
+                        type: string
+                      enModuleDescription:
+                        type: string
+                      ruModuleDescription:
+                        type: string
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    delete:
+      tags:
+        - Portfolio
+      summary: Delete Portfolio
+      description: Remove Portfolio by admin
+      operationId: removePortfolio
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        content:
+          application/json:
+            schema:
+              id:
+                type: string
+              example:
+                id: 6266613b5d44248c72d15dd8
+        required: true
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/portfolio:
+    get:
+      tags:
+        - Portfolio
+      summary: Get Portfolios
+      description: Portfolios display
+      operationId: getPortfolios
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/portfolio/{id}:
+      get:
+        tags:
+          - Portfolio
+        summary: Get Portfolio
+        operationId: getPortfolio
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: id
+            in: path
+            type: string
+            example: 626661abe375250f61aed043
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/portfolio/category/{category}:
+      get:
+        tags:
+          - Portfolio
+        summary: Get Portfolio by Category
+        operationId: getPortfolioByCategory
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: category
+            in: path
+            type:
+            description: Category Id
+            example: 6266613b5d44248c72d15dd8
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/admin/portfolio/module/{id}:
+    post:
+      tags:
+        - Portfolio
+      summary: Add module to Portfolio
+      operationId: addModuleToPortfolio
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: id
+          in: path
+          type: string
+          example: 626661abe375250f61aed043
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - Portfolio
+      summary: Add module to Portfolio
+      operationId: addModuleToPortfolio
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: id
+          in: path
+          type: string
+          example: 626661abe375250f61aed043
+      requestBody:
+        description: Update Portfolio module by Admin
+        content:
+          application/json:
+            schema:
+              title:
+                type: string
+              description:
+                type: string
+            example: # Sample object
+              title: İnterier
+              description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+    delete:
+        tags:
+        - Portfolio
+        summary: Delete module from Portfolio
+        operationId: deleteModuleToPortfolio
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: id
+            in: path
+            type: string
+            example: 626661abe375250f61aed043
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/admin/interior:
+    post:
+      tags:
+        - Interior
+      summary: Create Interior
+      description: Create Interior by admin
+      operationId: createInterior
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Interior title
+                  example: Başlı yaz
+                category[]:
+                  type: array
+                  items:
+                    type: string
+                    example: 6266613b5d44248c72d15dd8
+                  description: Multiple Portfolio category id
+                place:
+                  type: string
+                spiker :
+                  type : string
+                startDate :
+                  type : date
+                endDate :
+                  type : date
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description:  poster image
+                description:
+                  type: string
+                  description: Description .
+                  example: Bir şeylər yaz
+                footerImage:
+                  type: array
+                  items:
+                    type: file
+                  description:  footer image
+                module:
+                  type: array
+                  description:  xarakteriztika ->  Modul `title` və `description` - dan ibarətdir istədiyin qədər yaratmaq olar sadəcə `title` və `descriptionun` value - lərini dəyiş .
+                  items:
+                    properties:
+                      title:
+                        type: string
+                      description:
+                        type: string
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - Interior
+      summary: Update Interior
+      description: Update Interior by admin .
+      operationId: updateInterior
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Get Interior id
+                title:
+                  type: string
+                  description: Interior title
+                  example: Başlı yaz
+                category:
+                  type: string
+                  description: Interior category id
+                  example: 6266613b5d44248c72d15dd8
+                place:
+                  type: string
+                spiker:
+                  type: string
+                startDate:
+                  type: date
+                endDate:
+                  type: date
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description: Interior poster image
+                description:
+                  type: string
+                  description: Description
+                  example: Bir şeylər yaz
+                footerImage:
+                  type: array
+                  items:
+                    type: file
+                  description: Interior footer image
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    delete:
+      tags:
+        - Interior
+      summary: Delete Interior
+      description: Remove Interior by admin
+      operationId: removeInterior
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        content:
+          application/json:
+            schema:
+              id:
+                type: string
+              example:
+                id: 6266613b5d44248c72d15dd8
+        required: true
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/interior:
+      get:
+        tags:
+          - Interior
+        summary: Get Interior
+        description: Interior display
+        operationId: getInteriors
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/interior/{id}:
+      get:
+        tags:
+          - Interior
+        summary: Get Interior
+        operationId: getInterior
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: id
+            in: path
+            type: string
+            example: 626661abe375250f61aed043
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/interior/category/{category}:
+      get:
+        tags:
+          - Interior
+        summary: Get Interior by Category
+        operationId: getInteriorByCategory
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: category
+            in: path
+            type:
+            description: Category Id
+            example: 6266613b5d44248c72d15dd8
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/admin/interior/module/{id}:
+      post:
+        tags:
+          - Interior
+        summary: Add module to Interior
+        operationId: addModuleToInterior
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: id
+            in: path
+            type: string
+            example: 626661abe375250f61aed043
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+      patch:
+        tags:
+          - Interior
+        summary: Add module to Interior
+        operationId: addModuleToInterior
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: id
+            in: path
+            type: string
+            example: 626661abe375250f61aed043
+        requestBody:
+              description: Update interior module by Admin
+              content:
+                application/json:
+                  schema:
+                    title:
+                      type: string
+                    description:
+                      type: string
+                  example: # Sample object
+                    title: İnterier
+                    description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+      delete:
+        tags:
+          - Interior
+        summary: Delete module from Interior
+        operationId: deleteModuleToInterior
+        parameters:
+          - in: header
+            name: Accept-Language
+            type: string
+            enum: [ en, ru, az ]
+            required: true
+            description: use `en`,`ru` or `az`
+            example: en
+            default: en
+          - name: id
+            in: path
+            type: string
+            example: 626661abe375250f61aed043
+        responses:
+          201:
+            description: 200
+          409:
+            description: Conflict
+          400:
+            description: Bad Request
+          503:
+            description: Service Unavailable
+  /api/admin/main:
+    post:
+      tags:
+        - Home
+      summary: Create Home page header (Dont use this api)
+      description: Create Home page header by admin
+      operationId: createHomePageHeader
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                azTitle:
+                  type: string
+                  description: Header title
+                  example: Leyla Naib
+                enTitle:
+                  type: string
+                  description: Header title
+                  example: Leyla Naib
+                ruTitle:
+                  type: string
+                  description: Header title
+                  example: Leyla Naib
+                azTitleExtension:
+                  type: string
+                  description: Title extension
+                  example: jabbarlı
+                enTitleExtension:
+                  type: string
+                  description: Title extension
+                  example: jabbarlı
+                ruTitleExtension:
+                  type: string
+                  description: Title extension
+                  example: jabbarlı
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description: Header image
+                azQuote:
+                  type: string
+                  description: Quote
+                  example: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                enQuote:
+                  type: string
+                  description: Quote
+                  example: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                ruQuote:
+                  type: string
+                  description: Quote
+                  example: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                azAuthor:
+                  type: string
+                  example: Leyla Naib
+                enAuthor:
+                  type: string
+                  example: Leyla Naib
+                ruAuthor:
+                  type: string
+                  example: Leyla Naib
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - Home
+      summary: Update Home Page Header
+      description: Update Home page header by admin . Poster Image yalnız update olur  file - ni seç və yalnız 1 ədəd olur .
+      operationId: updatePortfolio
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Header id
+                  required: true
+                azTitle:
+                  type: string
+                  description: Header title
+                  example: Leyla Naib
+                enTitle:
+                  type: string
+                  description: Header title
+                  example: Leyla Naib
+                ruTitle:
+                  type: string
+                  description: Header title
+                  example: Leyla Naib
+                azTitleExtension:
+                  type: string
+                  description: Title extension
+                  example: jabbarlı
+                enTitleExtension:
+                  type: string
+                  description: Title extension
+                  example: jabbarlı
+                ruTitleExtension:
+                  type: string
+                  description: Title extension
+                  example: jabbarlı
+                poster:
+                  type: array
+                  items:
+                    type: file
+                  description: Header image
+                azQuote:
+                  type: string
+                  description: Quote
+                  example: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                enQuote:
+                  type: string
+                  description: Quote
+                  example: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                ruQuote:
+                  type: string
+                  description: Quote
+                  example: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                azAuthor:
+                  type: string
+                  example: Leyla Naib
+                enAuthor:
+                  type: string
+                  example: Leyla Naib
+                ruAuthor:
+                  type: string
+                  example: Leyla Naib
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/main:
+    get:
+      tags:
+        - Home
+      summary: Get Home Page Header
+      description: Get main header details
+      operationId: getPortfolio
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/about:
+    post:
+      tags:
+        - About
+      summary: Create About Details (Dont use this api)
+      description: Create About page details by admin
+      operationId: createAbout
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                azTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlı yaz
+                enTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlı yaz
+                ruTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlı yaz
+                about:
+                  type: array
+                  items:
+                    type: file
+                  description: About header image
+                azQuote:
+                  type: string
+                  description: About quote image
+                  example: Mövzu
+                enQuote:
+                  type: string
+                  description: About quote image
+                  example: Mövzu
+                ruQuote:
+                  type: string
+                  description: About quote image
+                  example: Mövzu
+                about1:
+                  type: array
+                  items:
+                    type: file
+                  description: about image after header
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+    patch:
+      tags:
+        - About
+      summary: Update About
+      description: Update About page details by admin
+      operationId: updateAbout
+      parameters:
+        - name: x-leyla-authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+        - name: x-leyla-refreshToken
+          in: header
+          description: a refresh header
+          required: true
+          type: string
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Get blog id
+                azTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlı yaz
+                enTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlıq yaz
+                ruTitle:
+                  type: string
+                  description: Blog title
+                  example: Başlıq yaz
+                about:
+                  type: array
+                  items:
+                    type: file
+                  description: About header image
+                azQuote:
+                  type: string
+                  description: About quote image
+                  example: Mövzu
+                enQuote:
+                  type: string
+                  description: About quote image
+                  example: Mövzu
+                ruQuote:
+                  type: string
+                  description: About quote image
+                  example: Mövzu
+                about1:
+                  type: array
+                  items:
+                    type: file
+                  description: about image after header
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/about:
+    get:
+      tags:
+        - About
+      summary: Get About
+      description: Get About page details by admin
+      operationId: getAbout
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/about/content/{id}:
+    patch:
+      tags:
+        - About
+      summary: Update About Content
+      description: Update About Content by admin
+      operationId: updateAboutContent
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: id
+          in: path
+          type: string
+          example: 6274d15275082c77ade6f28b
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                row:
+                  type: number
+                  description: contenti sırasını göstərir
+                  example: 1
+                about:
+                  type: array
+                  items:
+                    type: file
+                  description: About header image
+                description:
+                  type: string
+                  description: Contentin mövzusu əgər varsa
+                  example: Mövzu
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/about/module/{id}:
+    patch:
+      tags:
+        - About
+      summary: Update About Module
+      description: Update About Module details by admin
+      operationId: updateAboutModule
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: id
+          in: path
+          type: string
+          example: 6274d15275082c77ade6f28b
+      requestBody:
+        description: Update about module by Admin
+        content:
+          application/json:
+            schema:
+              title:
+                type: string
+              description:
+                type: string
+            example: # Sample object
+              title: İnterier
+              description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/message/{skip}/{limit}:
+    get:
+      tags:
+        - Inbox
+      summary: Get messages
+      operationId: inbox
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+        - name: skip
+          in: path
+          type: number
+          example: 0
+        - name: limit
+          in: path
+          type: number
+          example: 8
+      responses:
+        201:
+          description: Created
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/file/upload:
+    post:
+      tags:
+        - File
+      summary: Add File
+      description: Add file by admin
+      operationId: addFile
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: array
+                  items:
+                    type: file
+                  description: Upload Image
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/file/remove:
+    delete:
+      tags:
+        - File
+      summary: Remove File
+      description: Remove file by admin
+      operationId: removeFile
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                 id:
+                  type: string
+                  example : 62f234e4c695286090a9f645
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/category:
+    post:
+      tags:
+        - Category
+      summary: Create Category
+      description: Create Category by admin
+      operationId: createCategory
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                categoryName:
+                  type: string
+                  example: EXCLUSIVE DECOR
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/category:
+    get:
+      tags:
+        - Category
+      summary: Get Category
+      description: Get Category
+      operationId: getCategory
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/category/update:
+    patch:
+      tags:
+        - Category
+      summary: Update Category
+      description: Update Category by admin
+      operationId: updateCategory
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                categoryName:
+                  type: string
+                  example: EXCLUSIVE DECOR
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable
+  /api/admin/category/delete:
+    delete:
+      tags:
+        - Category
+      summary: Remove Category
+      description: Remove Category by admin
+      operationId: removeCategory
+      parameters:
+        - in: header
+          name: Accept-Language
+          type: string
+          enum: [ en, ru, az ]
+          required: true
+          description: use `en`,`ru` or `az`
+          example: en
+          default: en
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  example: 6290850194df609dc05b1db4
+      responses:
+        201:
+          description: 200
+        409:
+          description: Conflict
+        400:
+          description: Bad Request
+        503:
+          description: Service Unavailable

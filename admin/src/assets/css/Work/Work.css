@@ -1,0 +1,57 @@
+.work{
+    position: relative;
+    width: 50%;
+    margin-left: 16%;
+    margin-top: 40px;
+    min-height: 400px;
+    background: #FFFFFF;
+    border: 1px solid #E3E5E4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.work-container{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-container p:nth-child(1){
+    width: 80%;
+}
+
+.work-edit-modal {
+    position: relative;
+    width: 75%;
+    margin-left: 16%;
+    margin-top: 40px;
+    min-height: 500px;
+    background: #FFFFFF;
+    border: 1px solid #E3E5E4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.work-edit-modal form{
+    margin-left: 0;
+}
+
+.work-button button{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 0 10px;
+    height: 40px;
+    background: #323232;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #F8F8F8;
+}

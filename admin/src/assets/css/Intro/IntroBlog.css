@@ -1,0 +1,14 @@
+.intro-blog-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+.intro-blog{
+    width: 600px;
+    padding: 20px;
+    background: #FFFFFF;
+    order: 1px solid #E3E5E4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}

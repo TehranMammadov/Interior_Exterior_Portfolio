@@ -1,0 +1,44 @@
+.slide2-container {
+  padding-bottom: 140px;
+}
+
+.slide2 {
+  width: 75%;
+  margin-left: 16%;
+  margin-top: 40px;
+  background: #ffffff;
+  border: 1px solid #e3e5e4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow-y: scroll;
+  padding: 20px;
+}
+.slide2 .input.file {
+  margin-top: 20px;
+}
+.insturactions h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+.insturactions ul li {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+  color: #595959;
+}

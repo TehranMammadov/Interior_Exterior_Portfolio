@@ -1,0 +1,150 @@
+@import "../../../../styles/styles";
+
+.main-img-container {
+  padding: 40px 0 70px $paddingLeft;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  aside {
+    width: 35%;
+    &.details-aside {
+      margin-top: 30px;
+      color: $blackColorHeaders;
+      h2,
+      h3 {
+        @include fontStyles($interFont, $fontSizeTexts-1920px, 500, $blackColorHeaders);
+      }
+      h3:first-letter {
+        text-transform: uppercase;
+      }
+      h2 {
+        text-transform: uppercase;
+        border-bottom: 1px solid $blackColorHeaders;
+        padding-bottom: 4px;
+        max-width: 300px;
+        margin-bottom: 15px;
+      }
+      .details-container {
+        &:not(:first-of-type) {
+          margin-top: 20px;
+        }
+        span {
+          @include fontStyles($interFont, $fontSizeTexts-1600px, 400, $blackColorHeaders);
+          margin-bottom: 3px;
+          display: inline-block;
+        }
+        span:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .image-aside {
+    position: relative;
+    width: 62.5%;
+    img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
+    p {
+      position: absolute;
+      top: 32px;
+      left: 20px;
+      text-transform: uppercase;
+      @include fontStyles($interFont, 22px, 400, white);
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .details-aside {
+    h2,
+    h3 {
+      font-size: $fontSizeTexts-1600px !important; 
+    }
+    .details-container {
+      span {
+        font-size: $fontSizeTexts-1450px !important;
+      }
+    }
+  }
+  .image-aside {
+    p {
+      font-size: $fontSizeTexts-1920px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .details-aside {
+    h2,
+    h3 {
+      font-size: $fontSizeTexts-1450px !important;
+    }
+    .details-container {
+      span {
+        font-size: 14px !important;
+      }
+    }
+  }
+  .image-aside {
+    p {
+      font-size: $fontSizeTexts-1600px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main-img-container {
+    padding-left: 20px;
+    aside {
+      &.details-aside {
+        margin-top: 0;
+      }
+      &.image-aside {
+        img {
+          height: 40vh;
+        }
+        p {
+          font-size: 1.18rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .main-img-container {
+    flex-direction: column-reverse;
+    padding-right: 0;
+    padding-left: 0;
+    aside {
+      &.details-aside {
+        margin-top: 50px;
+        width: 100%;
+        padding: 0 20px;
+      }
+      &.image-aside {
+        width: 100% !important;
+        img {
+          height: 40vh;
+        }
+        p {
+          font-size: 1.18rem;
+        }
+      }
+    }
+    img {
+      aspect-ratio: 1/1;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .image-aside {
+    p {
+      font-size: $fontSizeTexts-1450px !important;
+    }
+  }
+}

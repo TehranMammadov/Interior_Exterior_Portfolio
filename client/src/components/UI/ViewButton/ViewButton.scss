@@ -1,0 +1,57 @@
+@import "../../../styles/styles";
+
+.view-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 2px solid $blackColorContents;
+  border-radius: 25px;
+  padding: 6px 20px 5px 20px;
+  z-index: 100000;
+  visibility: hidden;
+  p {
+    @include fontStyles(
+      $interFont,
+      $fontSizeTexts-1920px,
+      500,
+      $blackColorContents
+    );
+    margin-right: 15px;
+  }
+  svg {
+    width: 65px;
+    height: 15px;
+    fill: $blackColorContents;
+  }
+  &.hover {
+    visibility: visible;
+  }
+  &.white-view-button {
+    border: 2px solid white;
+    p {
+      color: white;
+    }
+    svg {
+      fill: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .view-button {
+    p {
+      font-size: $fontSizeTexts-1600px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .view-button {
+    p {
+      font-size: $fontSizeTexts-1450px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.auth{
+    width: 450px;
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth h1{
+    font-family: 'Inter';
+    margin-bottom: 10px;
+}
+
+.auth form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0 !important;
+}
+
+.auth form input{
+    outline: none;
+    padding: 4px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.auth form label {
+    text-transform: lowercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.auth form label:first-letter {
+    text-transform: uppercase;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login-btn{
+    margin-top: 20px;
+    margin-left: 0 !important;
+}
+
+.form-p{
+    margin-top: 4px;
+    font-family: "Poppins";
+    font-size: 14px;
+    cursor: pointer;
+}

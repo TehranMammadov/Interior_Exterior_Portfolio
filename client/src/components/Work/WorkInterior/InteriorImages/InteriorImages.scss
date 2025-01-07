@@ -1,0 +1,73 @@
+@import "../../../../styles/styles";
+
+.interior-images {
+  padding: 100px 0 20px $mainPaddingRightAndLeft;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  .image-element {
+    width: 48%;
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
+  }
+  .opened-img-modal {
+    width: calc(100% - 9.4%);
+    position: fixed;
+    bottom: 0;
+    display: none;
+    .clicked-img {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .interior-images {
+    padding-left: 20px;
+    .image-element {
+      width: 48.5%;
+      img {
+        height: 40vh;
+      }
+    }
+    .opened-img-modal {
+      width: calc(100% - 20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .interior-images {
+    .image-element {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .interior-images {
+    padding-left: 0;
+    .opened-img-modal {
+      padding-left: 0;
+    }
+    .opened-img-modal {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.app-cursor {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: #f0e983;
+  transform: translate(-50%, -50%);
+  transform-origin: 100% 100%;
+  cursor: none;
+  overflow: hidden;
+  position: fixed;
+  pointer-events: none;
+  // mix-blend-mode: difference;
+  transition-property: width, visibility;
+  z-index: 10000;
+  &:hover {
+    cursor: none;
+  }
+  &.pointer {
+    visibility: hidden;
+  }
+}

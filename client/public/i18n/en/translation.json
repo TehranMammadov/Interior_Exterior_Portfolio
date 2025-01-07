@@ -1,0 +1,210 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "service": "service",
+    "portfolio": "Portfolio",
+    "bloq": "Blog",
+    "contact": "Contact",
+    "lng": "en"
+  },
+  "footer": {
+    "1": {
+      "title": "DESIGNED BY CLARADIX"
+    }
+  },
+  "home": {
+    "banner-btn": "Show all",
+    "Point-btn": "More",
+    "placeholder1": "Exclusive decoration",
+    "placeholder2": "İnterior",
+    "placeholder3": "Exterior",
+    "placeholder4": "Construction",
+    "placeholder5": "Landscape",
+    "news-title": "Let's work together",
+    "news-title1": "Contact us",
+    "news-title2": "Want to start a new project? Let's make your ideas a reality together!",
+    "news-title3": "see all jobs"
+  },
+  "about": {
+    "videosData": [
+      {
+        "link": "https://youtu.be/v9HnP3MPKYc",
+        "title": "Leyla Jabbarli, founder of 'High Interior Design' company - ARB 24 (Business Lady)"
+      },
+      {
+        "link": "https://youtu.be/bEatV_6hlOk",
+        "title": "Creative industry. Who is an interior designer?"
+      },
+      {
+        "link": "https://youtu.be/IomQjsd7tMk",
+        "title": "Leyla Jabbarli: A designer should also be a psychologist and study the client's lifestyle - REQUIREMENT"
+      },
+      {
+        "link": "https://youtu.be/LJ4HAKCz5ik",
+        "title": "A discussion of tamet stones and facade paints applied to sidewalks and streets. Ajar broadcast public TV"
+      },
+      {
+        "link": "https://youtu.be/etjr6tzon60",
+        "title": "Interior design Asian restaurant Takeshi Leyla Naib Jabbarli, Baku/Azerbaijan."
+      },
+      {
+        "link": "https://youtu.be/DuUuqSaZ14M",
+        "title": "Garden house in Mardakan. Exterior and landscape design 'High Interior Design' Leyla Naib Jabbarli"
+      },
+      {
+        "link":"https://youtu.be/gxTe0CQhIyo",
+        "title":"National decor in the interior. Creative industry show. ARB24. Interior designer Leyla Naib Jabbarli"
+      }
+    ],
+    "videoSwitch": {
+      "link": "Click the link to watch"
+    }
+  },
+  "service": {
+    "advantages": [
+      {
+        "text": "Individual approach to each person."
+      },
+      {
+        "text": "Making an estimate is free of charge."
+      },
+      {
+        "text": "Assistance in accepting apartments in new buildings."
+      },
+      {
+        "text": "Warranty, Quality, Time and Labor Saving, Budget Saving, Formulation of Technical Terms and Calculation of Estimates."
+      },
+      {
+        "text": "Using only high-quality (not fake), environmentally friendly materials."
+      },
+      {
+        "text": "The use of high-precision modern technologies that modernize the repair process as much as possible."
+      },
+      {
+        "text": "Conducting quality control at all stages of repair implementation."
+      },
+      {
+        "text": "All services in one company."
+      }
+    ],
+    "guarantee": {
+      "description": "We guarantee all work done for 1 to 3 years, depending on the type of repair. We guarantee the privacy, property security, building regulations and cleanliness of each customer.",
+      "applicable": {
+        "title": "The warranty applies to all works performed under the contract, namely:",
+        "elements": [
+          {
+            "text": "Infrastructure works;"
+          },
+          {
+            "text": "Electrical installation works;"
+          },
+          {
+            "text": "Plumbing works;"
+          },
+          {
+            "text": "To other unseen works."
+          }
+        ]
+      },
+      "notProvided": {
+        "title": "The warranty does not cover the following materials and defects:",
+        "elements": [
+          {
+            "text": "Normal wear and tear of the object;"
+          },
+          {
+            "text": "In case of improper use of equipment and materials;"
+          },
+          {
+            "text": "Unforeseen cases, namely: flooding of buildings, fire, erosion of concrete panels, etc.;"
+          },
+          {
+            "text": "Violation of the rules of use of the space."
+          }
+        ]
+      }
+    },
+    "insurance": {
+      "description": "Repair insurance allows you to protect your property in case of unexpected events - a great way to reduce costs, repair work and protect the family budget.",
+      "elements": [
+        {
+          "text": "Theft or vandalism (for example - if hooligans break the glass)."
+        },
+        {
+          "text": "Flooding of the apartment due to the fault of third parties."
+        },
+        {
+          "text": "In the apartment or in the neighbors, natural disasters, gas explosion, fire."
+        }
+      ]
+    },
+    "repairStages": [
+      {
+        "id": "01",
+        "title": "Preparation",
+        "desc": "Project discussion, Measurement of buildings, Preparation of design project (if not available), Preparation of engineering plans (if necessary), Preparation of contract and detailed estimate for the project project, Preparation of detailed schedule. production of work and supply of materials, negotiation and adjustment of contracts and estimates, conclusion of the contract. 1-2 days if there is a finished project. 1-2 months when preparing a complete design project"
+      },
+      {
+        "id": "02",
+        "title": "Infrastructure",
+        "desc": "Procurement and delivery of infrastructure materials to the site, Dismantling and installation of internal partitions, Equipment for electrical wiring and low-voltage networks, Equipment for water supply and sewage, Plastering of walls, ceilings and floors, Underfloor heating, ventilation and installation. air conditioning systems, hardware paint and plasterboard works for sound and heat insulation of walls, floors, ceilings 1.5-3 months"
+      },
+      {
+        "id": "03",
+        "title": "Cosmetics",
+        "desc": "Ceramic tiles, porcelain stoneware, marble, etc. Laying of parquet, parquet or solid boards, painting of walls, ceilings, slopes, applying decorative plaster, wallpaper, frescoes, installation of interior door blocks, decorations and skirting, connecting plumbing fixtures, connection of electrical devices, cleaning and cleaning of construction waste 1.5- 3 months"
+      },
+      {
+        "id": "04",
+        "title": "Furniture",
+        "desc": "Delivery and assembly of upholstered furniture. Delivery and assembly of carpentry furniture, blocks, etc. Installation of shelves, cornices and other accessories. Hanging of curtains, arrangement of pillows and other textiles. Assembling of kitchen, household, TV equipment, etc. 10-14 days (completion of finishing works carried out at the same time as)"
+      },
+      {
+        "id": "05",
+        "title": "Delivery",
+        "desc": "Automation, lighting, water supply, all air conditioners, ventilation, heating systems, etc. ,All ordered furniture, textiles, decorations, etc. checking availability. , Cleaning the object, washing the windows, Handing over the object and signing the final act of the work done 1-2 days"
+      }
+    ]
+  },
+  "main 4": {
+    "title h1": "Repair stages"
+  },
+  "1": {
+    "title": "Preparation",
+    "title1": "Discussion of project, Measurement of buildings, Preparation of design draft (if not available), Preparation of engineering drafts (if necessary), Drafting of contract and detailed estimate for project design, Drafting of detailed schedule, production of work and supply of materials, Negotiation of contract and estimates and making corrections, concluding the contract. 1-2 days if there is a finished project. 1-2 months when preparing a complete design project"
+  },
+  "title h1": {
+    "2": "Infrastructure",
+    "title2": "Purchase and delivery of infrastructure materials to the site, Dismantling and installation of internal partitions, Devices for electrical wiring and low-voltage networks, Devices for water supply and sewage, Plastering of walls, ceilings and floors, Floor heating, ventilation and installation of air conditioning systems, Walls , hardware paint and plasterboard works for sound and heat insulation of floors, ceilings 1.5-3 months"
+  },
+  "title h2": {
+    "3": "Cosmetic",
+    "title3": "Ceramic tiles, porcelain stoneware, marble, etc. Laying of parquet, parquet or solid boards, painting of walls, ceilings, slopes, applying decorative plaster, wallpaper, frescoes, installation of interior door blocks, decorations and skirting, connecting plumbing fixtures, connection of electrical devices, cleaning and cleaning of construction waste 1.5- 3 months"
+  },
+  "title h3": {
+    "4": "Furniture",
+    "title": "Delivery and assembly of upholstered furniture. Delivery and assembly of carpentry furniture, blocks, etc. Installation of shelves, cornices and other accessories. Hanging of curtains, arrangement of pillows and other textiles. Assembling of kitchen, household, TV equipment, etc. 10-14 days (completion of finishing works carried out at the same time as)"
+  },
+  "title h4": {
+    "5": "Delivery",
+    "title": "Checking the availability of automation, lighting, water supply, all air conditioners, ventilation, heating systems, etc., All ordered furniture, textiles, decorations, etc., Cleaning the facility, washing windows, Handing over the facility and signing the final act of work done -2 days"
+  },
+  "portfolio": {
+    "text": "Informations"
+  },
+  "bloq": {
+    "notification": "More",
+    "content":"Go to blog"
+  },
+  "Contact": {
+    "main-h1": "Let's work together",
+    "main-h2": "Contact us",
+    "more-title": "Want to start a new project? Let's realize your ideas together!",
+    "send": "Send",
+    "message": "Message sent successfully",
+    "name": "Name and Surname",
+    "email": "E-mail",
+    "phone": "Phone"
+  }
+}

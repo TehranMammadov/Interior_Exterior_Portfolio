@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1b1b1b;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+body{
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+button{
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+form{
+  margin-left: 16%;
+}
+
+form label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1B1B1B;
+}
+
+form label input{
+  height: 40px;
+  padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #595959;
+  outline: none;
+  background: #FFFFFF;
+  border: 1px solid #E3E5E4;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.form-buttons{
+    margin-top: 40px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-buttons button:nth-child(1){
+    padding: 0 10px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #848484;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #848484;
+}
+
+.form-buttons button:nth-child(2),
+.login-btn{
+    padding: 0 10px;
+    height: 40px;
+    background: #323232;
+    border-radius: 3px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #F8F8F8;
+    margin-left: 10px;
+}
+
+ol{
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+ol li{
+  margin-bottom: 5px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #595959;
+}
+
+.media{
+  padding: 10px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E3E5E4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: 20px;
+  width: 256px;
+  height: 150px;
+  position: relative;
+}
+
+.media svg{
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.media-word{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1B1B1B;
+}
+
+.breadcrumb{
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  margin-top: 60px;
+  padding-left: 20px;
+}
+
+.breadcrumb p{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1B1B1B;
+  padding-left: 5px;
+}
+
+.breadcrumb svg{
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  color: #8C8E8D;
+}
+
+.form-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid #E3E5E4;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-top: 7px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #27348B;
+  cursor: pointer;
+}
+
+.form-button svg{
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  header,
+  .intro-contact-container{
+    width: 82% !important;
+    padding: 10px !important;
+  }
+}
+
+.category-word{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.categoryContainer input{
+  margin: 0px;
+}
