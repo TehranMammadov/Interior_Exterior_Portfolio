@@ -35,10 +35,8 @@ const Login = () => {
                 await axios.post(`${process.env.REACT_APP_URL}/api/user/login`, credentials)
                     .then((res) => {
                         let date=new Date();
-                        let authToken = res.headers['x-leyla-authorization'].split(" ")[1];
-                        let refreshToken = res.headers['x-leyla-refreshtoken'].split(" ")[1];
-                        localStorage.setItem("$2a$10$ipcxyA96qc1pdz9r1IPYf.DJFQGuJpWXRyBuCEbyRKMl6", authToken);
-                        localStorage.setItem("DJFQGuJpWXRyBuCEbyRKMl6$2a$10$ipcxyA96qc1pdz9r1IPYf", refreshToken);
+                        localStorage.setItem("$2a$10$ipcxyA96qc1pdz9r1IPYf.DJFQGuJpWXRyBuCEbyRKMl6", res.data.accessToken);
+                        localStorage.setItem("DJFQGuJpWXRyBuCEbyRKMl6$2a$10$ipcxyA96qc1pdz9r1IPYf", res.data.refreshToken);
                         localStorage.setItem('date',date.getTime());
                         navigate('/')
                     })

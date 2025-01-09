@@ -22,8 +22,8 @@ const checkLanguage = require("../utill/accept_language");
         const result = await loginSystem(email,password,lang);
         res.setHeader('x-leyla-authorization', `Bearer ${result.accessToken}`);
         res.setHeader('x-leyla-refreshToken', `Bearer ${result.refreshToken}`);
-        delete result.refreshToken;
-        delete result.accessToken;
+        // delete result.refreshToken;
+        // delete result.accessToken;
         logger.debug("UserController.login -- success");
         res.status(200).send(result);
     }catch (error){

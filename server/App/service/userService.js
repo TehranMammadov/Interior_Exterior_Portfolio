@@ -30,12 +30,13 @@ const registration = async (email,password,confirmPassword,lang)=>{
         throw ApiError.BadRequest(language[lang].passwordMismatch);
     }
     const hashPassword = await bcrypt.hash(password, 3);
-    const role = await findRoleByValue(enums.USER);
+    // const role = await findRoleByValue(enums.USER);
+    const role = await findRoles()
     if (!role){
         logger.warn("userService.registration -- success");
         throw ApiError.NotFoundException(language[lang].notExistRole);
     }
-    const user = await createUser(email,hashPassword,role._id);
+    const user = await createUser(email,hashPassword,role[1]._id);
     if (!user){
         logger.warn("userService.registration -- success");
         throw ApiError.GeneralException(language[lang].serverError);
@@ -77,7 +78,6 @@ const getRoles = async (lang)=>{
 const loginSystem = async (email,password,lang)=>{
     logger.debug("userService.loginSystem -- start");
     const user = await findUserByEmail(email);
-    console.log(email,password)
     if (!user) {
         logger.warn("userService.loginSystem - user not founded ");
         throw ApiError.NotFoundException(language[lang].userNotExist);
