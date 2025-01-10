@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React,{ useEffect, useRef } from 'react';
 import replaceBaseURL from '../../../utils/replaceurl';
 
-const AboutImages = ({ aboutContent }) => {
+const AboutImages = ({ aboutData }) => {
     gsap.registerPlugin(ScrollTrigger);
     const rotateImage = useRef();
 
@@ -29,19 +29,19 @@ const AboutImages = ({ aboutContent }) => {
             <div className='about-images__triangle'>
                 <img src={triangleImg} alt="" />
             </div>
-            {aboutContent ?
+            {aboutData ?
                 <>
                     <div className='about-images__main-img'>
-                        <img src={replaceBaseURL(aboutContent[0]?.image[0]?.url)} alt="" />
+                        <img src={replaceBaseURL(aboutData[0].content[0]?.image[0]?.url)} alt="" />
                     </div>
                     <div className='about-images__small-img'>
                         <div className='about-images__small-img__rotate' ref={rotateImage} id="rotate-img">
-                            <img src={replaceBaseURL(aboutContent[1]?.image[0]?.url)} alt="" />
+                            <img src={replaceBaseURL(aboutData[2].content[1]?.image[0]?.url)} alt="" />
                         </div>
                         {/* <p>{aboutContent[1]?.description}</p> */}
                     </div>
                     <div className='about-images__medium-img'>
-                        <img src={replaceBaseURL(aboutContent[2]?.image[0]?.url)} alt="" />
+                        <img src={replaceBaseURL(aboutData[2].content[2]?.image[0]?.url)} alt="" />
                         {/* <p>{aboutContent[2]?.description}</p> */}
                     </div>
                 </>

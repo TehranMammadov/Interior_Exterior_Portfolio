@@ -279,11 +279,11 @@ const Blog = () => {
                             enContent: e.azContent
                           });
                         }}
-                        class="fas fa-edit"
+                        className="fas fa-edit"
                       ></i>
                       <i
                         onClick={() => deleteBlog(e._id)}
-                        class="fas fa-trash"
+                        className="fas fa-trash"
                       ></i>
                     </div>
                   );

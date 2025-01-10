@@ -37,7 +37,6 @@ const About = ({ homeActive, setHomeActive }) => {
   });
 
   const [aboutData, setAboutData] = useState([]);
-  const [aboutContent, setAboutContent] = useState([]);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_URL}/api/about`).then((res) => {
@@ -45,12 +44,6 @@ const About = ({ homeActive, setHomeActive }) => {
       return setAboutData(res.data.result);
     });
   }, []);
-
-  useEffect(() => {
-    if (aboutData.length) {
-      setAboutContent(aboutData[0].content);
-    }
-  }, [aboutData]);
 
   return (
     <>
@@ -60,7 +53,7 @@ const About = ({ homeActive, setHomeActive }) => {
         <>
           <BreadCrumb />
           <LeylaAbout aboutData={aboutData} />
-          <AboutImages aboutContent={aboutContent} />
+          <AboutImages aboutData={aboutData} />
           <AboutVideos />
         </>
       )}
