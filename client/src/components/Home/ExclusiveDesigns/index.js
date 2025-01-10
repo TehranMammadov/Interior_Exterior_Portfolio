@@ -53,7 +53,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
             </div>
             <div className="exclusive-design__container__card-item__image">
               <img
-                src={portfolioData && portfolioData[0]?.posterImage[0]?.url.replace(process.env.REACT_APP_URL_PROD, process.env.REACT_APP_URL_DEV)}
+                src={portfolioData && replaceBaseURL(portfolioData[0]?.posterImage[0]?.url)}
                 alt=""
               />
             </div>
@@ -73,7 +73,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
             </div>
             <div className="exclusive-design__container__card-item__image">
               <img
-                src={portfolioData && portfolioData[1]?.posterImage[0]?.url.replace(process.env.REACT_APP_URL_PROD, process.env.REACT_APP_URL_DEV)}
+                src={portfolioData && replaceBaseURL(portfolioData[1]?.posterImage[0]?.url)}
                 alt=""
               />
             </div>
@@ -93,7 +93,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
             </div>
             <div className="exclusive-design__container__card-item__image">
               <img
-                src={portfolioData && portfolioData[13]?.posterImage[0]?.url.replace(process.env.REACT_APP_URL_PROD, process.env.REACT_APP_URL_DEV)}
+                src={portfolioData && replaceBaseURL(portfolioData[13]?.posterImage[0]?.url)}
                 alt=""
               />
             </div>
@@ -110,7 +110,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
             </div>
             <div className="exclusive-design__container__card-item__image">
               <img
-                src={portfolioData && portfolioData[17]?.posterImage[0]?.url.replace(process.env.REACT_APP_URL_PROD, process.env.REACT_APP_URL_DEV)}
+                src={portfolioData && replaceBaseURL(portfolioData[17]?.posterImage[0]?.url)}
                 alt=""
               />
             </div>
