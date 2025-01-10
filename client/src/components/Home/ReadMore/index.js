@@ -20,6 +20,7 @@ const ReadMore = ({ blogDataHome }) => {
   }, [blogDataHome])
 
   useEffect(() => {
+    console.log(blogDataHome)
       if (blogDataHome) {
           for (let i = 0; i < singleWordsMore?.length; i++) {
               addedMoreText(singleWordsMore[i], i);

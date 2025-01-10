@@ -71,7 +71,9 @@ const ViewAll = ({ portfolioDataHome }) => {
     }
   };
 
-  console.log(portfolioDataHome)
+  useEffect(() => {
+      console.log(portfolioDataHome)
+  }, [portfolioDataHome])
 
   return (
 

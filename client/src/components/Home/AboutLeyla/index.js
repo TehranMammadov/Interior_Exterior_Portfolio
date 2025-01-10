@@ -1,10 +1,13 @@
 import "./AboutLeyla.scss";
 import quoteIcon from "../../../assets/images/quote.png";
 import triangle from "../../../assets/images/triangle-home.png";
-import React from "react";
+import React, { useEffect } from "react";
 import replaceBaseURL from "../../../utils/replaceurl";
 
 const AboutLeyla = ({ aboutLeila }) => {
+  useEffect(() => {
+    console.log(aboutLeila)
+  }, [aboutLeila])
   return (
     <section className="about-leila">
       <div className="about-leila__image">
