@@ -1,5 +1,4 @@
 function replaceBaseURL(url) {
-  console.log(url, url?.includes(process.env.REACT_APP_URL_LOCAL))
   if (url && url.includes(process.env.REACT_APP_URL_LOCAL)) return url.replace(
     process.env.REACT_APP_URL_LOCAL,
     process.env.REACT_APP_URL
