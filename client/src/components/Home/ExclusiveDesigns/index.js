@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from "react";
+import React,{ useState } from "react";
 import "./ExclusiveDesigns.scss";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next'
@@ -38,10 +38,6 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
       mousecursor.classList.remove("pointer");
     }
   };
-
-  useEffect(() => {
-    console.log(portfolioData)
-  }, [portfolioData])
 
   return (
     <section className="exclusive-design">

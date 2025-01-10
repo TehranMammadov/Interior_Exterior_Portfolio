@@ -9,7 +9,6 @@ const LeylaNaib = ({ leilaName }) => {
   const [surnameLeila, setSurnameLeila] = useState("");
 
   useEffect(() => {
-    console.log(leilaName)
     const leilaData = leilaName[0]?.author.split(" ");
     if (leilaData) {
       setNameLeila(leilaData[0]);

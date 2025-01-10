@@ -71,12 +71,7 @@ const ViewAll = ({ portfolioDataHome }) => {
     }
   };
 
-  useEffect(() => {
-      console.log(portfolioDataHome)
-  }, [portfolioDataHome])
-
   return (
-
     <section className="view-all">
       <div className="view-all__title">
         {!matchMedia ? <p>{t('home.banner-btn')}</p> : <p>{t('home.news-title3')}</p>}

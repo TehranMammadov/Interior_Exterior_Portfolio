@@ -119,22 +119,27 @@ const Home = ({ setHomeActive, homeActive }) => {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_URL}/api/main`).then((res) => {
       setIsLoading(false);
+      console.log("main", res)
       return setAboutLeila(res.data.result);
     });
     axios.get(`${process.env.REACT_APP_URL}/api/portfolio`).then((res) => {
       setIsLoading(false);
+      console.log("portfolio", res)
       return setPortfolioData(res.data.result);
     });
     axios.get(`${process.env.REACT_APP_URL}/api/main`).then((res) => {
       setIsLoading(false);
+      console.log("main name", res)
       return setLeilaName(res.data.result);
     });
     axios.get(`${process.env.REACT_APP_URL}/api/blog`).then((res) => {
       setIsLoading(false);
+      console.log("blog", res)
       return setBlogDataHome(res.data.result.splice(0, 2));
     });
     axios.get(`${process.env.REACT_APP_URL}/api/portfolio`).then((res) => {
       setIsLoading(false);
+      console.log("portfolio data", res)
       return setPortfolioDataHome(res.data.result);
     });
   }, []);
