@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from "react";
 import "./LeylaNaib.scss";
 
-const LeylaNaib = ({ leilaName }) => {
+const LeylaNaib = ({ aboutLeila }) => {
   //responsive render
   let matchMedia = window.matchMedia("(max-width: 991px)").matches;
 
@@ -9,7 +9,7 @@ const LeylaNaib = ({ leilaName }) => {
   const [surnameLeila, setSurnameLeila] = useState("");
 
   useEffect(() => {
-    const leilaData = leilaName[0]?.author.split(" ");
+    const leilaData = aboutLeila[0]?.author.split(" ");
     if (leilaData) {
       setNameLeila(leilaData[0]);
       setSurnameLeila(leilaData[1]);
@@ -26,13 +26,13 @@ const LeylaNaib = ({ leilaName }) => {
               <span className="leyla-naib__naib">{surnameLeila}</span>
             </div>
             <span className="leyla-naib__surname">
-              {leilaName[0]?.titleExtension}
+              {aboutLeila[0]?.titleExtension}
             </span>
           </>
         ) : (
           <>
-            <h1>{leilaName[0]?.author}</h1>
-            <p>{leilaName[0]?.titleExtension}</p>
+            <h1>{aboutLeila[0]?.author}</h1>
+            <p>{aboutLeila[0]?.titleExtension}</p>
           </>
         )}
       </div>

@@ -4,7 +4,7 @@ import "./ViewAll.scss";
 import { useTranslation } from 'react-i18next'
 import replaceBaseURL from "../../../utils/replaceurl";
 
-const ViewAll = ({ portfolioDataHome }) => {
+const ViewAll = ({ portfolioData }) => {
   const [valueData, setValueData] = useState(0);
   const [cardIndex, setCardIndex] = useState();
   const imageContainer = useRef();
@@ -89,8 +89,8 @@ const ViewAll = ({ portfolioDataHome }) => {
           onScroll={onScrollHandler}
           ref={imageContainer}
         >
-          {portfolioDataHome &&
-            portfolioDataHome?.map((item, index) => (
+          {portfolioData &&
+            portfolioData?.map((item, index) => (
               <Link
                 to={`/portfolio/interior/${item._id}`}
                 key={index}

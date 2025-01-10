@@ -112,35 +112,20 @@ const Home = ({ setHomeActive, homeActive }) => {
   const [aboutLeila, setAboutLeila] = useState([]);
   const [portfolioData, setPortfolioData] = useState([]);
   const [categoryNameData, setCategoryNameData] = useState([]);
-  const [leilaName, setLeilaName] = useState([]);
   const [blogDataHome, setBlogDataHome] = useState([]);
-  const [portfolioDataHome, setPortfolioDataHome] = useState([]);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_URL}/api/main`).then((res) => {
       setIsLoading(false);
-      console.log("main", res)
       return setAboutLeila(res.data.result);
     });
     axios.get(`${process.env.REACT_APP_URL}/api/portfolio`).then((res) => {
       setIsLoading(false);
-      console.log("portfolio", res)
       return setPortfolioData(res.data.result);
-    });
-    axios.get(`${process.env.REACT_APP_URL}/api/main`).then((res) => {
-      setIsLoading(false);
-      console.log("main name", res)
-      return setLeilaName(res.data.result);
     });
     axios.get(`${process.env.REACT_APP_URL}/api/blog`).then((res) => {
       setIsLoading(false);
-      console.log("blog", res)
       return setBlogDataHome(res.data.result.splice(0, 2));
-    });
-    axios.get(`${process.env.REACT_APP_URL}/api/portfolio`).then((res) => {
-      setIsLoading(false);
-      console.log("portfolio data", res)
-      return setPortfolioDataHome(res.data.result);
     });
   }, []);
 
@@ -150,9 +135,9 @@ const Home = ({ setHomeActive, homeActive }) => {
         <Loader />
       ) : (
         <>
-          <LeylaNaib leilaName={leilaName} />
+          <LeylaNaib aboutLeila={aboutLeila} />
           <AboutLeyla aboutLeila={aboutLeila} />
-          <ViewAll portfolioDataHome={portfolioDataHome} />
+          <ViewAll portfolioData={portfolioData} />
           <ExclusiveDesigns
             portfolioData={portfolioData}
             categoryNameData={categoryNameData}

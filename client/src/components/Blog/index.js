@@ -14,12 +14,10 @@ const Blog = ({ homeActive, setHomeActive }) => {
       setHomeActive(false);
     }
   }, [homeActive]);
-  console.log({env:process.env.REACT_APP_URL})
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_URL}/api/blog`).then((res) => {
       setIsLoading(false);
-      console.log({res})
       return setBlogData(res.data.result);
     });
   }, []);
