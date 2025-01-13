@@ -92,7 +92,7 @@ const ViewAll = ({ portfolioData }) => {
           {portfolioData &&
             portfolioData?.map((item, index) => (
               <Link
-                to={`/portfolio/interior/${item._id}`}
+                to={`/portfolio/${item.id}`}
                 key={index}
                 onMouseMove={() => (onViewButton(), setCardIndex(index))}
                 onMouseOut={offViewButton}

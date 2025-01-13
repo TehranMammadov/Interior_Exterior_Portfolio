@@ -57,7 +57,7 @@ const ReadMore = ({ blogDataHome }) => {
             <p className="read-more-desc" id={`more-desc-${index}`}></p>
             <div className="read-more__container__description__title-and-btn-container">
               <div className="read-more-btn">
-                <Link to={`/blog/interior/${blogData && blogData?._id}`}>
+                <Link to={`/blog/${blogData && blogData?.id}`}>
                   <button>{t ('home.Point-btn')}</button>
                 </Link>
               </div>

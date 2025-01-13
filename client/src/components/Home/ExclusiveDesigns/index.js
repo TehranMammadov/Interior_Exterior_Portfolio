@@ -43,7 +43,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
     <section className="exclusive-design">
       <div className="exclusive-design__container">
         <Link
-          to={`/portfolio/interior/${portfolioData && portfolioData[0]?._id}`}
+          to={`/portfolio/${portfolioData && portfolioData[0]?.id}`}
           onMouseMove={() => (onViewButton(), setCardIndex(0))}
           onMouseOut={offViewButton}
         >
@@ -60,10 +60,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
           </div>
         </Link>
         <Link
-          to={`/portfolio/interior/${portfolioData && portfolioData[1]?._id}`}
-          // onClick={(e) => {
-          //   e.preventDefault();
-          // }}
+          to={`/portfolio/${portfolioData && portfolioData[1]?.id}`}
           onMouseMove={() => (onViewButton(), setCardIndex(1))}
           onMouseOut={offViewButton}
         >
@@ -80,10 +77,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
           </div>
         </Link>
         <Link
-          to={`/portfolio/interior/${portfolioData && portfolioData[13]?._id}`}
-          // onClick={(e) => {
-          //   e.preventDefault();
-          // }}
+          to={`/portfolio/${portfolioData && portfolioData[13]?.id}`}
           onMouseMove={() => (onViewButton(), setCardIndex(2))}
           onMouseOut={offViewButton}
         >
@@ -100,7 +94,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
           </div>
         </Link>
         <Link
-          to={`/portfolio/interior/${portfolioData && portfolioData[17]?._id}`}
+          to={`/portfolio/${portfolioData && portfolioData[17]?.id}`}
           onMouseMove={() => (onViewButton(), setCardIndex(3))}
           onMouseOut={offViewButton}
         >
@@ -117,10 +111,7 @@ const ExclusiveDesigns = ({ portfolioData, categoryNameData }) => {
           </div>
         </Link>
         <Link
-          to={`/portfolio/interior/${portfolioData && portfolioData[11]?._id}`}
-          // onClick={(e) => {
-          //   e.preventDefault();
-          // }}
+          to={`/portfolio/${portfolioData && portfolioData[11]?.id}`}
           onMouseMove={() => (onViewButton(), setCardIndex(4))}
           onMouseOut={offViewButton}
         >
