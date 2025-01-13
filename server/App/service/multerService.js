@@ -65,10 +65,14 @@ const deleteOldImages = async (paths) => {
     try {
         for(let path of paths){
             let newPath = 'public/' + path.split(process.env.URL)[1]
-            await fs.unlink(newPath)
+            if (!newPath.includes("undefined")) {
+                await fs.unlink(newPath)
+            }
         }
     } catch (error) {
-        throw ApiError.NotFoundException("Image is not founded in server")
+        if (!error.message.includes("no such file or directory")) {
+            throw ApiError.NotFoundException("Image is not founded in server")
+        }
     }
     
 }

@@ -38,15 +38,10 @@ function Home() {
             navigate("/login")
         } else {
             fetchApi().then((data) => {
-                console.log(data)
                 setDefaultData(data.result);
             });
         }
     }, [token])
-
-    // useEffect(() => {
-    // }, [])
-
 
     const [selectedFile, setSelectedFile] = useState(null);
 

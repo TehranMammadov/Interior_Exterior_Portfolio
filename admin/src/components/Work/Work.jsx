@@ -379,7 +379,7 @@ const Work = () => {
           </div>
           <div className="work-button">
             <Link to="/work-add">
-              <button>"Əlavə et"</button>
+              <button>Əlavə et</button>
             </Link>
           </div>
         </div>
