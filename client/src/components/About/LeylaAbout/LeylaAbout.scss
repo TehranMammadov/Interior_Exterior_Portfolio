@@ -53,7 +53,7 @@
       h1 {
         @include fontStyles($cormorantFont, $commonMiddleFontSize-1920px, 400, white);
         text-align: end;
-        padding-right: 3%;
+        padding-right: 6%;
         padding-top: 30px;
       }
     }
@@ -65,7 +65,8 @@
     &__description {
       &__triangle {
         h1 {
-          padding-right: 1%;
+          font-size: $commonMiddleFontSize-1600px;
+          padding-right: 8%;
         }
       }
     }
@@ -77,7 +78,7 @@
     &__description {
       &__triangle {
         h1 {
-          padding-right: 0;
+          padding-right: 5%;
         }
       }
     }
@@ -95,8 +96,7 @@
       &__triangle {
         width: 58%;
         h1 {
-          font-size: $commonMiddleFontSize-1600px;
-          padding-right: 35px;
+          padding-right: 2%;
         }
       }
     }
