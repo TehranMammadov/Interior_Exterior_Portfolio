@@ -53,8 +53,32 @@
       h1 {
         @include fontStyles($cormorantFont, $commonMiddleFontSize-1920px, 400, white);
         text-align: end;
-        padding-right: 80px;
+        padding-right: 3%;
         padding-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .leila-about {
+    &__description {
+      &__triangle {
+        h1 {
+          padding-right: 1%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .leila-about {
+    &__description {
+      &__triangle {
+        h1 {
+          padding-right: 0;
+        }
       }
     }
   }
