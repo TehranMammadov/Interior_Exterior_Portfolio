@@ -8,7 +8,7 @@
   position: relative;
   &__image {
     position: absolute;
-    width: 40%;
+    width: 42%;
     z-index: 999;
     max-height: 600px;
     img {
@@ -53,7 +53,7 @@
       h1 {
         @include fontStyles($cormorantFont, $commonMiddleFontSize-1920px, 400, white);
         text-align: end;
-        padding-right: 15%;
+        padding-right: 80px;
         padding-top: 30px;
       }
     }
@@ -72,6 +72,7 @@
         width: 58%;
         h1 {
           font-size: $commonMiddleFontSize-1600px;
+          padding-right: 35px;
         }
       }
     }

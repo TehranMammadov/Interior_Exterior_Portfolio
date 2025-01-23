@@ -2,14 +2,15 @@ import "./LeylaAbout.scss";
 import quoteIcon from "../../../assets/images/quote.png";
 import triangle from "../../../assets/images/triangle-about.png";
 import React from "react";
-import replaceBaseURL from "../../../utils/replaceurl";
+import AboutMainImg from "../../../assets/images/about-main.webp"
 
 
 const LeylaAbout = ({ aboutData }) => {
   return (
     <section className="leila-about">
       <div className="leila-about__image"> 
-          <img src={aboutData && replaceBaseURL(aboutData[0].image?.url)} alt="Leila Image" />
+        <img src={AboutMainImg} alt="" />
+          {/* <img src={aboutData && replaceBaseURL(aboutData[0].image?.url)} alt="Leila Image" /> */}
       </div>
       <div className="leila-about__description">
         <div className="leila-about__description__texts">
