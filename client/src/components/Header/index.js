@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import LogoWhite from "../../assets/images/logo-signature-white.png";
-import mobileLogoDark from "../../assets/images/logo-mobile.png";
-import mobileLogoWhite from "../../assets/images/logo-white-mobile.png";
 import MultiLanguageMenu from "./MultiLanguageMenu";
 import { useTranslation } from 'react-i18next'
 import "./Header.scss";
@@ -112,12 +110,12 @@ const Header = ({ onMouseEnter, onMouseLeave, homeActive }) => {
         <>
           <div onClick={logoClickHandler} className="logo-mobile">
             <img
-              src={mobileLogoDark}
+              src={Logo}
               className="logo-dark-mobile"
               alt="mobile_logo"
             />
             <img
-              src={mobileLogoWhite}
+              src={LogoWhite}
               className="logo-white-mobile"
               alt="mobile_logo"
             />

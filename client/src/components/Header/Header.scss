@@ -19,8 +19,12 @@
   z-index: 9999;
 
   .logo {
+    width: 140px;
     .logo-white {
       display: none;
+    }
+    img {
+      width: 100%;
     }
   }
 
@@ -287,7 +291,11 @@
   .header {
 
     .logo-mobile {
-      width: 50px;
+      width: 70px;
+
+      img {
+        width: 100%;
+      }
     }
 
     .logo-white-mobile {

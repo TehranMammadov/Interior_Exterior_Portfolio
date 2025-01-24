@@ -2,7 +2,7 @@ import "./LeylaAbout.scss";
 import quoteIcon from "../../../assets/images/quote.png";
 import triangle from "../../../assets/images/triangle-about.png";
 import React from "react";
-import AboutMainImg from "../../../assets/images/about-main.webp"
+import AboutMainImg from "../../../assets/images/home-about.jpg"
 
 
 const LeylaAbout = ({ aboutData }) => {
